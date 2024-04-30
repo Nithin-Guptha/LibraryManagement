@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Update Book</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Custom CSS -->
+<style>
+    /* Custom Styles */
+    body {
+        background-image: url("https://media.istockphoto.com/id/1127545187/photo/large-books-shelves-fully-packed.jpg?s=1024x1024&w=is&k=20&c=sbL2r1LPGWEXgLt4nQkN-SZZTZuraa22MAdeW45Ho90="); 
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+    }
+    form {
+        max-width: 400px;
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+        font-weight: bold;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<form action="UpdateBookServlet" method="post">
+    <label for="bid">Book ID</label>
+    <input type="text" id="bid" name="bid" required>
+    
+    <label for="bname">Book Name</label>
+    <input type="text" id="bname" name="bname" required>
+    
+    <label for="bauthor">Book Author</label>
+    <input type="text" id="bauthor" name="bauthor" required>
+    
+    <label for="bedition">Book Edition</label>
+    <input type="text" id="bedition" name="bedition" required>
+    
+    <button type="submit">Update</button>
+</form>
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

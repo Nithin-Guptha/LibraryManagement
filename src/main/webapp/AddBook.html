@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Book</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://images.freeimages.com/images/large-previews/e25/my-university-library-4-1442029.jpg?fmt=webp&h=350");
+    background-size: cover;
+    background-position: center;
+  }
+
+  form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+<form action="AddBookServlet" method="post">
+    <label for="bid">Book ID</label>
+    <input type="text" id="bid" name="bid" required>
+    
+    <label for="bname">Book Name</label>
+    <input type="text" id="bname" name="bname" required>
+    
+    <label for="bauthor">Book Author</label>
+    <input type="text" id="bauthor" name="bauthor" required>
+    
+    <label for="bedition">Book edition</label>
+    <input type="text" id="bedition" name="bedition" required>
+    
+    <button type="submit">Add Book</button>
+</form>
+</body>
+</html>
